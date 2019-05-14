@@ -158,7 +158,7 @@ model_vgg_mnist_pretrain_sgd.summary()
 sgd=SGD(lr=0.001,decay=1e-5)
 model_vgg_mnist_pretrain_sgd.compile(optimizer=sgd,loss='mean_squared_error',
                                  metrics=['accuracy'])
-model_vgg_mnist_pretrain_sgd.fit(features_train,y_train_one,batch_size=128,epochs=50000,verbose=1,validation_data=(features_test,y_test_one))
+model_vgg_mnist_pretrain_sgd.fit(features_train,y_train_one,batch_size=128,epochs=500,verbose=1,validation_data=(features_test,y_test_one))
 score=model_vgg_mnist_pretrain_sgd.evaluate(features_test,y_test_one,verbose=1)
 print('Test accuracy:',score[1])
     
